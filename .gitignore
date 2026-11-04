@@ -1,0 +1,16 @@
+# Entornos virtuales
+.venv/
+venv/
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Base de datos generada por 02_limpieza_datos.ipynb (≈55 MB, se regenera ejecutando el notebook)
+*.db
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini

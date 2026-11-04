@@ -1,4 +1,6 @@
-1. Nuestra Empresa Ficticia
+# Esquema del proyecto
+
+## 1. Nuestra empresa ficticia
 
 Online Retail Co.
 
@@ -8,9 +10,9 @@ Nuestro equipo de datos recibe el historial de compras y la dirección quiere sa
 
 ¿Qué clientes están en riesgo de dejar de comprar y qué podemos hacer para retenerlos?
 
-2. Preguntas que queremos responder
+## 2. Preguntas que queremos responder
 
-A. Comportamiento de clientes
+### A. Comportamiento de clientes
 
 Queremos saber:
 
@@ -23,17 +25,19 @@ Queremos saber:
 ¿Hay clientes que compran muchísimo más que otros?
 ¿Existen diferentes tipos de clientes?
 
-B. Segmentación
-Descubirir grupos de Clientes ejemplo:
+### B. Segmentación
+Descubrir grupos de clientes, por ejemplo:
 
+```
                  CLIENTES
                     │
         ┌───────────┼───────────┐
         ↓           ↓           ↓
      VIP         Regulares    Inactivos
+```
 
 
-C. Abandono (Churn)
+### C. Abandono (churn)
 
 ¿Qué clientes tienen mayor probabilidad de dejar de comprar?
 
@@ -47,8 +51,9 @@ Y queremos saber:
 ¿Podemos predecir el abandono antes de que ocurra?
 
 
-D. Decisión empresarial
+### D. Decisión empresarial
 
+```
 Cliente A
 Riesgo: 85%
 Gasto histórico: 2.400 €
@@ -58,16 +63,17 @@ Cliente B
 Riesgo: 90%
 Gasto histórico: 20 €
 → PRIORIDAD BAJA
+```
 
 La empresa no necesariamente debería tratar igual a todos los clientes con el mismo riesgo. 
 (Valor económico del cliente)
 
-3. Definir Churn
+## 3. Definir churn
 
 CHURN = 1 si el cliente no realiza ninguna compra durante el período futuro. (abandona)
 CHURN = 0 si vuelve a comprar. (permanece activo)
 
-4. Definir Variables
+## 4. Definir variables
 
 | Variable              | Qué representa                       |
 | --------------------- | ------------------------------------ |
@@ -83,8 +89,9 @@ CHURN = 0 si vuelve a comprar. (permanece activo)
 | `country`             | País                                 |
 | `churn`               | Abandono                             |
 
-5. Base de datos
+## 5. Base de datos
 
+```
 Customers
     customer_id
     country
@@ -94,7 +101,7 @@ Orders
     customer_id
     order_date
 
-orders_datails
+order_details
     order_id
     product_id
     quantity
@@ -103,8 +110,9 @@ orders_datails
 products
     product_id
     description
+```
 
-6. Estructura tabla Machine Learning
+## 6. Estructura tabla Machine Learning
 
 | customer_id | recency | frequency | monetary | avg_order | products | churn |
 | ----------- | ------: | --------: | -------: | --------: | -------: | ----: |
@@ -113,8 +121,9 @@ products
 | 789         |      32 |        12 |      850 |        71 |        9 |     0 |
 
 
-7. Estructura Proyecto
+## 7. Estructura del proyecto
 
+```
 DATOS TRANSACCIONALES
         │
         ▼
@@ -137,3 +146,4 @@ DATOS TRANSACCIONALES
                         │
                         ▼
                 DECISIÓN EMPRESARIAL
+```
